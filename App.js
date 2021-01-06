@@ -24,6 +24,7 @@ import {
 import Entype from 'react-native-vector-icons/Entypo';
 import HomeScreen from './src/screens/Home/index';
 import Post from './src/components/Post';
+import SearchResultsScreen from './src/screens/SearchResults/index';
 
 import feed from './assets/data/feed';
 
@@ -37,8 +38,10 @@ const App: () => React$Node = () => {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         {/* <HomeScreen /> */}
-        <Post post={post1} />
-        <Post post={post2} />
+        {/* <Post post={post1} />
+        <Post post={post2} /> */}
+
+        <SearchResultsScreen />
       </SafeAreaView>
     </>
   );
