@@ -12,6 +12,7 @@ import {
   StatusBar,
 } from 'react-native';
 
+
 import {
   Header,
   LearnMoreLinks,
@@ -24,6 +25,11 @@ import Entype from 'react-native-vector-icons/Entypo';
 import HomeScreen from './src/screens/Home/index';
 import Post from './src/components/Post';
 
+import feed from './assets/data/feed';
+
+const post1 = feed[0];
+const post2 = feed[1];
+
 
 const App: () => React$Node = () => {
   return (
@@ -31,7 +37,8 @@ const App: () => React$Node = () => {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         {/* <HomeScreen /> */}
-        <Post />
+        <Post post={post1} />
+        <Post post={post2} />
       </SafeAreaView>
     </>
   );
