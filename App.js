@@ -26,6 +26,7 @@ import HomeScreen from './src/screens/Home/index';
 import Post from './src/components/Post';
 import SearchResultsScreen from './src/screens/SearchResults/index';
 import DestinationSearchScreen from './src/screens/DestinationSearch/index';
+import GuestsScreen from './src/screens/Guests/index';
 
 import feed from './assets/data/feed';
 
@@ -44,7 +45,8 @@ const App: () => React$Node = () => {
 
         {/* <SearchResultsScreen /> */}
 
-        <DestinationSearchScreen />
+        {/* <DestinationSearchScreen /> */}
+        <GuestsScreen />
 
       </SafeAreaView>
     </>
