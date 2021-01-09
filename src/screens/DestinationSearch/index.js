@@ -7,9 +7,15 @@ import Entypo from 'react-native-vector-icons/Entypo';
 
 import searchResults from '../../../assets/data/search';
 
+import SuggestionRow from './SuggestionRow';
+
+import { GooglePlacesAutocomplete  } from "react-native-google-places-autocomplete";
+
+
+
 const DestinationSearchScreen = (props) => {
 
-    const [inputText, setInputText] = useState('');
+   // const [inputText, setInputText] = useState('');
 
     const navigation = useNavigation();
 
@@ -17,24 +23,31 @@ const DestinationSearchScreen = (props) => {
     return (
         <View style={styles.container} > 
             {/* Input Component */}
-            <TextInput
-                style={styles.textInput}
-                placeholder="Where are you going?"
-                value={inputText}
-                onChangeText={setInputText}
-            />
-            {/* List of Destination */}
-            <FlatList 
-                data={searchResults}
-                renderItem={({item}) => ( 
-                <Pressable onPress={() => navigation.navigate('Guests')} style={styles.row}>
-                    <View style={styles.iconContainer}>
-                        <Entypo name={"location-pin"} size={30} />
-                    </View>
 
-                <Text style={styles.locationText} >{item.description}</Text>
-                </Pressable>)}
-            />
+         
+                <GooglePlacesAutocomplete
+                    placeholder='Where are you going?'
+                    onPress={(data, details = null) => {
+                        // 'details' is provided when fetchDetails = true
+                        console.log(data, details); // the details provided in returns photos / lats longs/ etc
+                        navigation.navigate('Guests');
+                    }}
+                    fetchDetails
+                    styles={{
+                        textInput: styles.textInput
+                    }}
+                    query={{
+                        key: 'AIzaSyCVY8xs11_JXWMc-Uc4fXE2um6EnmdTpYg',
+                        language: 'en',
+                        types: '(cities)'
+                    }}
+                    suppressDefaultStyles
+                    renderRow={(item) => <SuggestionRow item={item} />}
+                />
+               
+
+            {/* List of Destination */}
+          
         </View>
     );
 }
