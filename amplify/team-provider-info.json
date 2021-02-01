@@ -1,0 +1,28 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-airbnb-dev-145924-authRole",
+      "UnauthRoleArn": "arn:aws:iam::689634036936:role/amplify-airbnb-dev-145924-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::689634036936:role/amplify-airbnb-dev-145924-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-airbnb-dev-145924-deployment",
+      "UnauthRoleName": "amplify-airbnb-dev-145924-unauthRole",
+      "StackName": "amplify-airbnb-dev-145924",
+      "StackId": "arn:aws:cloudformation:us-east-1:689634036936:stack/amplify-airbnb-dev-145924/9c1a42f0-64bf-11eb-a1c4-0aa73eec129d",
+      "AmplifyAppId": "d34u1im06kaqb2"
+    }
+  },
+  "airbnb": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-airbnb-airbnb-151622-authRole",
+      "UnauthRoleArn": "arn:aws:iam::689634036936:role/amplify-airbnb-airbnb-151622-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::689634036936:role/amplify-airbnb-airbnb-151622-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-airbnb-airbnb-151622-deployment",
+      "UnauthRoleName": "amplify-airbnb-airbnb-151622-unauthRole",
+      "StackName": "amplify-airbnb-airbnb-151622",
+      "StackId": "arn:aws:cloudformation:us-east-1:689634036936:stack/amplify-airbnb-airbnb-151622/f976a4a0-64c1-11eb-9b1f-0a6d717c190d",
+      "AmplifyAppId": "d34u1im06kaqb2"
+    }
+  }
+}
